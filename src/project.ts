@@ -3,5 +3,6 @@ export interface Project {
 	name: string;
 	path: string;
 	addedAt: number;
+	language?: string;
 	technology?: string;
 }

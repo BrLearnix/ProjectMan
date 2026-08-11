@@ -1,71 +1,47 @@
-# projectman README
+# ProjectMan
 
-This is the README for your extension "projectman". After writing up a brief description, we recommend including the following sections.
+Gestor de proyectos para Visual Studio Code. ProjectMan te permite guardar, crear y abrir tus proyectos con un solo clic, sin depender de la carpeta de workspaces del editor.
 
-## Features
+![ProjectMan](media/projectman-icon.png)
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Características
 
-For example if there is an image subfolder under your extension project workspace:
+- **Panel visual de proyectos**: una vista en la barra de actividad con iconos para cada uno de tus proyectos.
+- **Añadir proyectos**: agrega cualquier carpeta de tu equipo a ProjectMan y accede a ella con un clic.
+- **Crear proyecto en blanco**: crea una carpeta nueva con `README.md`, `.gitignore` e inicializa `git`.
+- **Crear proyecto con comando**: se abre un terminal en la ubicación elegida para ejecutar comandos como `npm create vite@latest mi-proyecto`. Al terminar, la carpeta creada se añade automáticamente a la lista.
+- **Abrir al instante**: abre el proyecto en VS Code (con terminal preparada en la raíz del proyecto).
+- **Eliminar proyectos**: quita proyectos de la lista cuando ya no los necesites.
+- **Barra de estado**: muestra cuántos proyectos tienes guardados y da acceso rápido a la lista.
 
-\!\[feature X\]\(images/feature-x.png\)
+## Requisitos
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- Visual Studio Code 1.125.0 o superior.
+- Para crear proyectos con comando, necesitas tener instaladas las herramientas correspondientes (Node.js, .NET CLI, etc.).
 
-## Requirements
+## Uso
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+1. Abre la vista **ProjectMan** en la barra de actividad.
+2. Usa los botones de la parte superior de la vista para:
+   - **Crear nuevo proyecto**: elige entre proyecto en blanco o proyecto con comando.
+   - **Añadir proyecto**: selecciona una carpeta existente.
+   - **Actualizar**: refresca la lista de proyectos.
+3. Haz clic en un proyecto para abrirlo, y usa los botones sobre cada icono para abrirlo o eliminarlo.
 
-## Extension Settings
+También puedes usar la paleta de comandos (`Ctrl+Shift+P`) con los comandos `ProjectMan: ...`.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Comandos
 
-For example:
+| Comando | Descripción |
+| --- | --- |
+| `ProjectMan: Crear nuevo proyecto` | Crea un proyecto en blanco o con comando |
+| `ProjectMan: Crear proyecto con comando` | Abre un terminal para crear un proyecto ejecutando un comando |
+| `ProjectMan: Añadir proyecto` | Agrega una carpeta existente |
+| `ProjectMan: Abrir proyecto` | Abre un proyecto guardado |
+| `ProjectMan: Eliminar proyecto` | Quita un proyecto de la lista |
+| `ProjectMan: Mostrar proyectos` | Muestra la lista de proyectos |
+| `ProjectMan: Actualizar` | Refresca la lista de proyectos |
 
-This extension contributes the following settings:
+## Licencia
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE).

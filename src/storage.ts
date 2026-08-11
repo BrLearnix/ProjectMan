@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import { Project } from './project';
+import { detectTech } from './techDetector';
 
 const STORAGE_KEY = 'projectman.projects';
 
@@ -21,8 +22,37 @@ export class ProjectStorage {
 	}
 
 	async add(project: Project): Promise<void> {
+		this.fillTech(project);
 		this.projects.push(project);
 		await this.save();
+	}
+
+	async backfillTech(): Promise<void> {
+		let changed = false;
+		for (const project of this.projects) {
+			if (!project.language || !project.technology) {
+				changed = this.fillTech(project) || changed;
+			}
+		}
+		if (changed) {
+			await this.save();
+		}
+	}
+
+	private fillTech(project: Project): boolean {
+		let changed = false;
+		if (!project.language || !project.technology) {
+			const info = detectTech(project.path);
+			if (info.language && !project.language) {
+				project.language = info.language;
+				changed = true;
+			}
+			if (info.technology && !project.technology) {
+				project.technology = info.technology;
+				changed = true;
+			}
+		}
+		return changed;
 	}
 
 	async removeById(id: string): Promise<void> {

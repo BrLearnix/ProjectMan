@@ -36,7 +36,13 @@ function createMockWebviewView(): MockWebviewView {
 }
 
 function emptyProvider(): ProjectsPanelProvider {
-	return new ProjectsPanelProvider(() => [], async () => {}, async () => {}, async () => {});
+	return new ProjectsPanelProvider(
+		() => [],
+		async () => {},
+		async () => {},
+		async () => {},
+		async () => {}
+	);
 }
 
 suite('ProjectsPanelProvider', () => {
@@ -88,6 +94,7 @@ suite('ProjectsPanelProvider', () => {
 			() => projects,
 			async () => {},
 			async () => {},
+			async () => {},
 			async () => {}
 		);
 		provider.resolveWebviewView(mock.view);
@@ -111,12 +118,33 @@ suite('ProjectsPanelProvider', () => {
 				added += 1;
 			},
 			async () => {},
+			async () => {},
 			async () => {}
 		);
 		provider.resolveWebviewView(mock.view);
 		mock.messageHandler!({ type: 'add' });
 		await new Promise((resolve) => setTimeout(resolve, 10));
 		assert.strictEqual(added, 1);
+		assert.ok(mock.posted.some((m) => m.type === 'projects'));
+	});
+
+	test('new message triggers onNew and refreshes', async () => {
+		let created = 0;
+		const projects = [makeProject('Alpha', '/x/alpha')];
+		const mock = createMockWebviewView();
+		const provider = new ProjectsPanelProvider(
+			() => projects,
+			async () => {},
+			async () => {
+				created += 1;
+			},
+			async () => {},
+			async () => {}
+		);
+		provider.resolveWebviewView(mock.view);
+		mock.messageHandler!({ type: 'new' });
+		await new Promise((resolve) => setTimeout(resolve, 10));
+		assert.strictEqual(created, 1);
 		assert.ok(mock.posted.some((m) => m.type === 'projects'));
 	});
 });

@@ -3,6 +3,24 @@
   "displayName": "ProjectMan",
   "description": "A project manager for VS Code that automatically remembers your projects and lets you open them with one click.",
   "version": "0.0.1",
+  "publisher": "bernardohuaira",
+  "license": "MIT",
+  "icon": "media/projectman-icon.png",
+  "keywords": [
+    "project",
+    "projects",
+    "manager",
+    "workspace",
+    "folder"
+  ],
+  "galleryBanner": {
+    "color": "#0E639C",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrLearnix/ProjectMan.git"
+  },
   "engines": {
     "vscode": "^1.125.0"
   },
@@ -10,7 +28,10 @@
     "Other"
   ],
   "activationEvents": [
+    "onStartupFinished",
     "onView:projectman.projectsGrid",
+    "onCommand:projectman.newProject",
+    "onCommand:projectman.newProjectCommand",
     "onCommand:projectman.addProject",
     "onCommand:projectman.openProject",
     "onCommand:projectman.removeProject",
@@ -39,6 +60,16 @@
     },
     "commands": [
       {
+        "command": "projectman.newProject",
+        "title": "ProjectMan: Crear nuevo proyecto",
+        "icon": "$(new-folder)"
+      },
+      {
+        "command": "projectman.newProjectCommand",
+        "title": "ProjectMan: Crear proyecto con comando",
+        "icon": "$(terminal)"
+      },
+      {
         "command": "projectman.addProject",
         "title": "ProjectMan: Añadir proyecto",
         "icon": "$(add)"
@@ -66,14 +97,24 @@
     "menus": {
       "view/title": [
         {
-          "command": "projectman.addProject",
+          "command": "projectman.newProject",
           "when": "view == projectman.projectsGrid",
           "group": "navigation@1"
         },
         {
-          "command": "projectman.refresh",
+          "command": "projectman.addProject",
           "when": "view == projectman.projectsGrid",
           "group": "navigation@2"
+        },
+        {
+          "command": "projectman.newProjectCommand",
+          "when": "view == projectman.projectsGrid",
+          "group": "navigation@3"
+        },
+        {
+          "command": "projectman.refresh",
+          "when": "view == projectman.projectsGrid",
+          "group": "navigation@4"
         }
       ]
     }
@@ -85,6 +126,8 @@
     "watch:esbuild": "node esbuild.js --watch",
     "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
     "package": "npm run check-types && npm run lint && node esbuild.js --production",
+    "vsce-package": "npm run package && vsce package",
+    "vsce-publish": "npm run package && vsce publish",
     "compile-tests": "tsc -p . --outDir out",
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
@@ -93,16 +136,17 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.125.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "24.x",
-    "typescript-eslint": "^8.61.1",
-    "eslint": "^10.5.0",
+    "@types/vscode": "^1.125.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0",
+    "@vscode/vsce": "^3.9.2",
     "esbuild": "^0.28.1",
+    "eslint": "^10.5.0",
     "npm-run-all": "^4.1.5",
     "typescript": "^6.0.3",
-    "@vscode/test-cli": "^0.0.15",
-    "@vscode/test-electron": "^3.0.0"
+    "typescript-eslint": "^8.61.1"
   },
   "overrides": {
     "diff": "^8.0.4",
