@@ -1,7 +1,7 @@
 import * as path from 'path';
 import * as vscode from 'vscode';
 import { Project } from './project';
-import { ProjectItem, ProjectsProvider, toggleShowPaths } from './projectsTree';
+import { ProjectsPanelProvider } from './projectsPanel';
 import { ProjectStorage } from './storage';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -43,8 +43,7 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.window.showInformationMessage(`Proyecto "${project.name}" añadido.`);
 	};
 
-	const openProject = async (item?: ProjectItem): Promise<void> => {
-		let project: Project | undefined = item?.project;
+	const openProject = async (project?: Project): Promise<void> => {
 		if (!project) {
 			project = await pickProject(storage);
 			if (!project) {
@@ -54,8 +53,7 @@ export function activate(context: vscode.ExtensionContext) {
 		await vscode.commands.executeCommand('vscode.openFolder', vscode.Uri.file(project.path));
 	};
 
-	const removeProject = async (item?: ProjectItem): Promise<void> => {
-		let project: Project | undefined = item?.project;
+	const removeProject = async (project?: Project): Promise<void> => {
 		if (!project) {
 			project = await pickProject(storage);
 			if (!project) {
@@ -74,45 +72,47 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.window.showInformationMessage(`Proyecto "${project.name}" eliminado.`);
 	};
 
-	const provider = new ProjectsProvider(() => storage.all);
-	const treeView = vscode.window.createTreeView('projectman.projects', { treeDataProvider: provider });
+	const gridProvider = new ProjectsPanelProvider(() => storage.all, addProject, openProject, removeProject);
+
+	const refreshAll = (): void => {
+		gridProvider.refresh();
+		updateStatusBar();
+	};
+
+	context.subscriptions.push(statusBar);
+
+	try {
+		context.subscriptions.push(
+			vscode.window.registerWebviewViewProvider(ProjectsPanelProvider.viewType, gridProvider, {
+				webviewOptions: { retainContextWhenHidden: true },
+			})
+		);
+	} catch (err) {
+		vscode.window.showErrorMessage(
+			`ProjectMan: error al registrar la vista de iconos: ${String(err)}`
+		);
+	}
 
 	context.subscriptions.push(
-		statusBar,
-		treeView,
 		vscode.commands.registerCommand('projectman.addProject', async () => {
 			await addProject();
-			provider.refresh();
-			updateStatusBar();
+			refreshAll();
 		}),
-		vscode.commands.registerCommand('projectman.openProject', (item?: ProjectItem) => openProject(item)),
-		vscode.commands.registerCommand('projectman.removeProject', async (item?: ProjectItem) => {
-			await removeProject(item);
-			provider.refresh();
-			updateStatusBar();
+		vscode.commands.registerCommand('projectman.openProject', (project?: Project) => openProject(project)),
+		vscode.commands.registerCommand('projectman.removeProject', async (project?: Project) => {
+			await removeProject(project);
+			refreshAll();
 		}),
 		vscode.commands.registerCommand('projectman.refresh', () => {
-			provider.refresh();
-			updateStatusBar();
-		}),
-		vscode.commands.registerCommand('projectman.togglePath', async () => {
-			const visible = toggleShowPaths();
-			provider.refresh();
-			vscode.window.showInformationMessage(
-				visible ? 'ProjectMan: rutas visibles.' : 'ProjectMan: rutas ocultas.'
-			);
+			refreshAll();
 		}),
 		vscode.commands.registerCommand('projectman.show', async () => {
 			await vscode.commands.executeCommand('workbench.view.extension.projectman');
-			await vscode.commands.executeCommand('projectman.projects.focus');
+			await vscode.commands.executeCommand('projectman.projectsGrid.focus');
 		})
 	);
 
 	updateStatusBar();
-
-	void vscode.commands
-		.executeCommand('workbench.view.extension.projectman')
-		.then(() => vscode.commands.executeCommand('projectman.projects.focus'));
 }
 
 async function pickProject(storage: ProjectStorage): Promise<Project | undefined> {

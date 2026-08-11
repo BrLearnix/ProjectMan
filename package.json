@@ -10,13 +10,12 @@
     "Other"
   ],
   "activationEvents": [
-    "onView:projectman.projects",
+    "onView:projectman.projectsGrid",
     "onCommand:projectman.addProject",
     "onCommand:projectman.openProject",
     "onCommand:projectman.removeProject",
     "onCommand:projectman.refresh",
-    "onCommand:projectman.show",
-    "onCommand:projectman.togglePath"
+    "onCommand:projectman.show"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -32,17 +31,12 @@
     "views": {
       "projectman": [
         {
-          "id": "projectman.projects",
-          "name": "Proyectos"
+          "id": "projectman.projectsGrid",
+          "name": "Iconos (visual)",
+          "type": "webview"
         }
       ]
     },
-    "viewsWelcome": [
-      {
-        "view": "projectman.projects",
-        "contents": "No hay proyectos todavía.\n[Añadir proyecto](command:projectman.addProject)"
-      }
-    ],
     "commands": [
       {
         "command": "projectman.addProject",
@@ -67,40 +61,19 @@
         "command": "projectman.refresh",
         "title": "ProjectMan: Actualizar",
         "icon": "$(refresh)"
-      },
-      {
-        "command": "projectman.togglePath",
-        "title": "ProjectMan: Ver/ocultar ruta"
       }
     ],
     "menus": {
       "view/title": [
         {
           "command": "projectman.addProject",
-          "when": "view == projectman.projects",
+          "when": "view == projectman.projectsGrid",
           "group": "navigation@1"
         },
         {
           "command": "projectman.refresh",
-          "when": "view == projectman.projects",
+          "when": "view == projectman.projectsGrid",
           "group": "navigation@2"
-        },
-        {
-          "command": "projectman.togglePath",
-          "when": "view == projectman.projects",
-          "group": "navigation@3"
-        }
-      ],
-      "view/item/context": [
-        {
-          "command": "projectman.openProject",
-          "when": "view == projectman.projects && viewItem == project",
-          "group": "inline@1"
-        },
-        {
-          "command": "projectman.removeProject",
-          "when": "view == projectman.projects && viewItem == project",
-          "group": "inline@2"
         }
       ]
     }
