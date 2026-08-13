@@ -4,6 +4,13 @@ Todos los cambios notables de esta extensión se documentarán en este archivo.
 
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 
+## [0.0.2] - 2026-08-12
+
+### Cambiado
+
+- Nuevo logo e icono de la extensión.
+- README mejorado con sección de demostración.
+
 ## [0.0.1] - 2026-08-10
 
 ### Añadido
