@@ -2,7 +2,11 @@
 
 Gestor de proyectos para Visual Studio Code. ProjectMan te permite guardar, crear y abrir tus proyectos con un solo clic, sin depender de la carpeta de workspaces del editor.
 
-![ProjectMan](media/projectman-icon.png)
+![ProjectMan](media/logo.png)
+
+## Demostración
+
+![Demostración de ProjectMan](media/image.png)
 
 ## Características
 

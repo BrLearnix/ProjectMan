@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "publisher": "bernardohuaira",
   "license": "MIT",
-  "icon": "media/projectman-icon.png",
+  "icon": "media/logo.png",
   "keywords": [
     "project",
     "projects",
@@ -45,7 +45,7 @@
         {
           "id": "projectman",
           "title": "ProjectMan",
-          "icon": "media/projectman-icon.svg"
+          "icon": "media/projectman-com.svg"
         }
       ]
     },
