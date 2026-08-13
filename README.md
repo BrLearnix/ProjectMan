@@ -258,7 +258,7 @@ and include the appropriate MIT license text.
 
 A Visual Studio Code extension focused on making project management simpler, faster, and more organized.
 
-📸 **Instagram:** [@bernardohuaira1](https://www.instagram.com/bernardohuaira1/)
+📸 [Instagram](https://www.instagram.com/bernardohuaira1/)
 
 ---
 
