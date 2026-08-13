@@ -23,11 +23,7 @@ With ProjectMan, you can register projects from any location, organize them in o
 
 Watch the following video to see ProjectMan in action:
 
-<!-- Replace this URL with your demo video -->
-
-[![ProjectMan Demo](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
-
-> 💡 Replace `VIDEO_ID` with the ID of your YouTube demonstration video.
+<video src="media/demo.mp4" autoplay muted loop playsinline></video>
 
 ---
 
