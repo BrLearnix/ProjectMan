@@ -19,10 +19,6 @@ With ProjectMan, you can register projects from any location, organize them in o
 
 ---
 
-## 🎥 Demo
-
-Watch the following video to see ProjectMan in action:
-
 <video src="media/demo.mp4" autoplay muted loop playsinline></video>
 
 ---
