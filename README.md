@@ -254,7 +254,7 @@ and include the appropriate MIT license text.
 
 ## 👨‍💻 Author
 
-**ProjectMan**
+**Bernardo Huaira**
 
 A Visual Studio Code extension focused on making project management simpler, faster, and more organized.
 
