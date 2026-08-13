@@ -200,7 +200,7 @@ Contributions, ideas, and suggestions are welcome.
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/projectman.git
+git clone https://github.com/BrLearnix/ProjectMan
 ```
 
 Open the project in Visual Studio Code:
@@ -257,6 +257,8 @@ and include the appropriate MIT license text.
 **ProjectMan**
 
 A Visual Studio Code extension focused on making project management simpler, faster, and more organized.
+
+📸 **Instagram:** [@bernardohuaira1](https://www.instagram.com/bernardohuaira1/)
 
 ---
 
