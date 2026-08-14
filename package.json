@@ -2,7 +2,7 @@
   "name": "projectman",
   "displayName": "ProjectMan",
   "description": "A project manager for VS Code that automatically remembers your projects and lets you open them with one click.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "bernardohuaira",
   "license": "MIT",
   "icon": "media/logo.png",

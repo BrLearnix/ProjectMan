@@ -19,7 +19,13 @@ With ProjectMan, you can register projects from any location, organize them in o
 
 ---
 
-<video src="media/demo.mp4" autoplay muted loop playsinline></video>
+## 🎥 Demo
+
+See ProjectMan in action:
+
+<p align="center">
+  <img src="media/demo.gif" alt="ProjectMan Demo" width="800" />
+</p>
 
 ---
 
