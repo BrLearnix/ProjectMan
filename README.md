@@ -1,206 +1,272 @@
-# ProjectMan
+# 🚀 ProjectMan
 
-> 🚀 **ProjectMan** is a Visual Studio Code extension designed to centralize, organize, and manage your development projects directly from VS Code, regardless of where those projects are physically stored on your computer.
+> **Manage all your projects directly from Visual Studio Code.**
 
-[![Visual Studio Code](https://img.shields.io/badge/VS%20Code-Extension-007ACC?logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-
----
-
-## 📌 Overview
-
-Developers often have projects distributed across many folders such as `Documents`, `Downloads`, `Desktop`, `Projects`, `Work`, `WordPress`, or other custom directories. Finding and opening these projects repeatedly can become tedious.
-
-**ProjectMan** solves this problem by allowing you to keep a centralized list of your projects inside Visual Studio Code.
-
-With ProjectMan, you can register projects from any location, organize them in one place, open them instantly, create new projects, and remove projects from your ProjectMan list without having to remember their physical location.
+Project Man is a VS Code extension that helps you **organize, manage, and quickly open your development projects**, even when they are stored in different folders or drives.
 
 > **One place. All your projects.**
-
----
 
 <p align="center">
   <img src="media/demo.gif" alt="ProjectMan Demo" width="800" />
 </p>
 
+<p align="center">
+
+[![Visual Studio Code](https://img.shields.io/badge/VS%20Code-Extension-007ACC?logo=visual-studio-code\&logoColor=white)](https://code.visualstudio.com/)
+[![Version](https://img.shields.io/visual-studio-marketplace/v/bernardohuaira.projectman?label=Marketplace)](https://marketplace.visualstudio.com/items?itemName=bernardohuaira.projectman)
+[![Installs](https://img.shields.io/visual-studio-marketplace/i/bernardohuaira.projectman?label=Installs)](https://marketplace.visualstudio.com/items?itemName=bernardohuaira.projectman)
+[![Rating](https://img.shields.io/visual-studio-marketplace/r/bernardohuaira.projectman?label=Rating)](https://marketplace.visualstudio.com/items?itemName=bernardohuaira.projectman)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
+</p>
+
+<p align="center">
+  <a href="https://marketplace.visualstudio.com/items?itemName=bernardohuaira.projectman">
+    <strong>🚀 Install ProjectMan</strong>
+  </a>
+</p>
+
 ---
 
-## ✨ Main Features
+## ✨ Why ProjectMan?
 
-### 📂 Centralized project management
-
-Manage projects located in completely different folders or drives from a single interface inside VS Code.
-
-### ➕ Add existing projects
-
-Register an existing project by selecting its folder. ProjectMan stores the project reference so you can access it later without searching for the folder manually.
-
-### 🚀 Open projects instantly
-
-Open a registered project directly from ProjectMan with a single action.
-
-### 🗑️ Remove projects
-
-Remove a project from your ProjectMan list when it is no longer needed.
-
-> Removing a project from ProjectMan does not necessarily mean deleting its files from your computer. Always confirm the action shown by the extension before deleting files.
-
-### 🆕 Create blank projects
-
-Create a new empty project from ProjectMan and choose where the project should be stored.
-
-### ⌨️ Command support
-
-Use Visual Studio Code commands to perform ProjectMan actions without manually navigating through the interface.
-
-### 🧭 Access projects regardless of their location
-
-Your projects can live in different locations, for example:
+As developers, we often work on multiple projects stored in different locations:
 
 ```text
-C:\Users\User\Documents\Projects
-C:\Users\User\Downloads
-C:\Users\User\Desktop\Work
-D:\Projects
-D:\WordPress
+Documents/
+Downloads/
+Desktop/
+Projects/
+Work/
+D:\Development/
+D:\Clients/
 ```
 
-ProjectMan gives you one centralized place to access them.
+Finding and opening those projects repeatedly can become frustrating.
 
----
+**ProjectMan keeps them accessible from one place inside VS Code.**
 
-## 🎯 Why ProjectMan?
-
-Without a project manager, developers may need to:
-
-1. Remember where each project is located.
-2. Navigate through multiple folders.
-3. Find the correct project manually.
-4. Open the project in VS Code.
-5. Repeat the process every time they switch projects.
-
-With ProjectMan, the workflow becomes simpler:
+Instead of:
 
 ```text
-ProjectMan
-   ↓
-Select Project
-   ↓
+Search for folder
+       ↓
+Find project
+       ↓
+Open folder
+       ↓
+Start working
+```
+
+You can simply:
+
+```text
+Open ProjectMan
+       ↓
+Select your project
+       ↓
 Open
-   ↓
-Start Working
+       ↓
+Start working 🚀
 ```
 
-This makes switching between projects faster and keeps your development workspace more organized.
+---
+
+## ✨ Features
+
+### 📂 Centralized Project Management
+
+Keep projects from different folders and drives in one centralized ProjectMan interface.
+
+### ➕ Add Existing Projects
+
+Add an existing project by selecting its folder.
+
+ProjectMan remembers the project so you can access it later without searching for its location again.
+
+### 🚀 Open Projects with One Click
+
+Open a registered project directly from ProjectMan.
+
+### 🆕 Create New Projects
+
+Create a new empty project and choose where it should be stored.
+
+### 🗑️ Remove Projects
+
+Remove projects from your ProjectMan list when they are no longer needed.
+
+> Removing a project from ProjectMan does not necessarily delete the project files from your computer. Always review the confirmation shown by the extension.
+
+### 🎨 Visual Project Interface
+
+Access your projects through a dedicated ProjectMan interface inside the VS Code Activity Bar.
+
+### ⌨️ Command Support
+
+Use the VS Code Command Palette to access ProjectMan actions quickly.
+
+---
+
+## 📸 Screenshots
+
+### ProjectMan Dashboard
+
+<p align="center">
+  <img src="media/screenshot-dashboard.png" alt="ProjectMan Dashboard" width="850" />
+</p>
+
+### Add a Project
+
+<p align="center">
+  <img src="media/screenshot-list-project.png" alt="List Project in ProjectMan" width="850" />
+</p>
+
+### Project Actions
+
+<p align="center">
+  <img src="media/screenshot-actions.png" alt="ProjectMan Actions" width="850" />
+</p>
+
+---
+
+## 🧩 Supported Projects
+
+ProjectMan can be used with virtually any project that can be opened as a folder in VS Code.
+
+Examples include:
+
+* 🌐 Web applications
+* ⚙️ Backend APIs
+* ⚛️ React applications
+* 🟢 Node.js projects
+* 🟣 Laravel projects
+* 🔷 .NET projects
+* 🟢 Angular applications
+* 🟢 Vue applications
+* 🌐 WordPress projects
+* 📱 Mobile projects
+* 🎓 University projects
+* 💼 Client projects
+* 🚀 Personal projects
+
+Your projects do **not** need to be stored in the same parent directory.
+
+---
+
+## ⌨️ Commands
+
+ProjectMan provides the following commands through the VS Code Command Palette:
+
+| Command                                  | Description                      |
+| ---------------------------------------- | -------------------------------- |
+| `ProjectMan: Mostrar proyectos`          | Open the ProjectMan project list |
+| `ProjectMan: Añadir proyecto`            | Add an existing project          |
+| `ProjectMan: Crear nuevo proyecto`       | Create a new project             |
+| `ProjectMan: Crear proyecto con comando` | Create a project using a command |
+| `ProjectMan: Abrir proyecto`             | Open a project                   |
+| `ProjectMan: Eliminar proyecto`          | Remove a project                 |
+| `ProjectMan: Actualizar`                 | Refresh the project list         |
 
 ---
 
 ## 📦 Installation
 
-### Install from the Visual Studio Code Marketplace
+### Visual Studio Code Marketplace
+
+The easiest way to install ProjectMan:
 
 1. Open **Visual Studio Code**.
-2. Open the **Extensions** view with `Ctrl + Shift + X`.
+2. Open the Extensions view with `Ctrl + Shift + X`.
 3. Search for **ProjectMan**.
-4. Select the extension.
+4. Select **ProjectMan**.
 5. Click **Install**.
 
-### Install from a VSIX package
+You can also install it directly from the:
 
-If you have a `.vsix` file:
-
-1. Open Visual Studio Code.
-2. Open the Extensions panel.
-3. Select the `...` menu.
-4. Choose **Install from VSIX...**.
-5. Select the ProjectMan `.vsix` file.
+**[Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=bernardohuaira.projectman)**
 
 ---
 
-## 🧩 Supported Workflow
+## 🚀 Getting Started
 
-ProjectMan is useful for developers who work with multiple types of projects, such as:
+After installing ProjectMan:
 
-- Web applications
-- APIs and backend services
-- Frontend projects
-- Laravel projects
-- .NET projects
-- Node.js projects
-- React applications
-- Angular applications
-- Vue applications
-- WordPress projects
-- Mobile applications
-- Personal projects
-- University projects
-- Client projects
+1. Open Visual Studio Code.
+2. Find the **ProjectMan** icon in the Activity Bar.
+3. Add your existing projects.
+4. Create new projects when needed.
+5. Select a project to open it instantly.
 
-ProjectMan does not need every project to be inside the same parent directory. The projects can be distributed across different folders and drives.
+ProjectMan will keep your registered projects available for quick access.
+
+---
+
+## 🗺️ Roadmap
+
+ProjectMan is actively being improved.
+
+Planned features include:
+
+* 🔍 Project search
+* ⭐ Favorites
+* 📁 Project categories and groups
+* 🏷️ Custom tags
+* ↕️ Sorting and filtering
+* 🕘 Recent projects
+* 🎨 Custom project icons
+* 📊 Project metadata
+* 📥 Import and export projects
+* ☁️ Cloud synchronization
+* 💾 Backup and restore
+* 📦 Project templates
+* ⌨️ Improved keyboard navigation
+* ⚡ Additional commands and shortcuts
+
+Have a feature idea? **[Open an issue](https://github.com/BrLearnix/ProjectMan/issues)** and let us know.
+
+---
 
 ## 🐞 Troubleshooting
 
-### The project does not open
+### A project does not open
 
 Check that:
 
 1. The project folder still exists.
 2. The folder has not been moved or renamed.
 3. The stored path is correct.
-4. Visual Studio Code has permission to access the folder.
+4. VS Code has permission to access the folder.
 
-### A project disappeared from the list
+### ProjectMan does not appear
 
-Verify that the project entry has not been removed and that the extension data has not been reset.
+Try:
 
-### The extension does not appear
+1. Reloading Visual Studio Code.
+2. Checking that ProjectMan is installed and enabled.
+3. Restarting VS Code.
+4. Checking the Extension Host logs if the problem persists.
 
-Try the following:
-
-1. Reload Visual Studio Code.
-2. Verify that ProjectMan is installed and enabled.
-3. Check the Extension Host logs if the problem persists.
-
----
-
-## 🔮 Future Improvements
-
-Possible future improvements for ProjectMan include:
-
-- Project search.
-- Project categories or groups.
-- Favorites.
-- Recent projects.
-- Project icons.
-- Custom tags.
-- Sorting and filtering.
-- Project metadata.
-- Workspace support.
-- Import/export project lists.
-- Cloud synchronization.
-- Backup and restore.
-- More project templates.
-- Improved keyboard navigation.
-- Custom commands and shortcuts.
+If the problem continues, please **[open an issue](https://github.com/BrLearnix/ProjectMan/issues)**.
 
 ---
 
 ## 🤝 Contributing
 
-Contributions, ideas, and suggestions are welcome.
+Contributions, ideas, bug reports, and feature requests are welcome.
 
 ### Development
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/BrLearnix/ProjectMan
+git clone https://github.com/BrLearnix/ProjectMan.git
 ```
 
-Open the project in Visual Studio Code:
+Open the project:
 
 ```bash
-cd projectman
+cd ProjectMan
 code .
 ```
 
@@ -210,39 +276,24 @@ Install dependencies:
 npm install
 ```
 
-Run the extension in development mode using the VS Code extension development environment.
-
-> Replace the repository URL and development commands according to your actual project configuration.
+Run the extension using the **VS Code Extension Development Host**.
 
 ---
 
-## 📣 Feedback and Suggestions
+## 💡 Feedback
 
-Have an idea to improve ProjectMan?
+Have an idea for ProjectMan?
 
-You can contribute by:
+You can:
 
-- Opening an issue.
-- Reporting a bug.
-- Suggesting a new feature.
-- Sharing feedback.
-- Contributing code.
+* 🐞 Report a bug
+* 💡 Request a feature
+* 💬 Share feedback
+* 🔧 Contribute code
+* ⭐ Rate the extension
+* 📢 Share ProjectMan with other developers
 
-Your feedback can help make ProjectMan better for the developer community.
-
----
-
-## 📄 License
-
-This project is distributed under the license included in the repository.
-
-If the project uses the MIT License, add the following file:
-
-```text
-LICENSE
-```
-
-and include the appropriate MIT license text.
+**Your feedback helps ProjectMan grow.**
 
 ---
 
@@ -250,26 +301,45 @@ and include the appropriate MIT license text.
 
 **Bernardo Huaira**
 
-A Visual Studio Code extension focused on making project management simpler, faster, and more organized.
+Developer and creator of ProjectMan.
 
-📸 [Instagram](https://www.instagram.com/bernardohuaira1/)
-
----
-
-## ⭐ Support the Project
-
-If ProjectMan is useful to you, consider supporting the project by:
-
-- ⭐ Rating the extension.
-- ⭐ Leaving a review.
-- 🐞 Reporting issues.
-- 💡 Sharing ideas.
-- 📢 Sharing ProjectMan with other developers.
-
-Every interaction helps the project grow.
+* 💻 [GitHub](https://github.com/BrLearnix)
+* 📸 [Instagram](https://www.instagram.com/bernardohuaira1/)
 
 ---
 
-## 🚀 ProjectMan
+## 📄 License
 
-> **Manage your projects. Open them faster. Keep everything organized — directly inside Visual Studio Code.**
+ProjectMan is licensed under the **MIT License**.
+
+See the [LICENSE](LICENSE) file for details.
+
+---
+
+## ⭐ Support ProjectMan
+
+If ProjectMan is useful to you:
+
+⭐ **Rate the extension on the VS Code Marketplace.**
+
+💬 **Leave a review.**
+
+🐞 **Report bugs.**
+
+💡 **Suggest features.**
+
+📢 **Share ProjectMan with other developers.**
+
+Every installation, review, and contribution helps the project grow.
+
+---
+
+<p align="center">
+
+### 🚀 ProjectMan
+
+**Manage your projects. Open them faster. Stay organized.**
+
+**Directly inside Visual Studio Code.**
+
+</p>
