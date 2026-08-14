@@ -2,7 +2,7 @@
   "name": "projectman",
   "displayName": "Project Man",
   "description": "Manage, organize, and quickly open all your projects directly from VS Code. ProjectMan remembers your projects and lets you access them with one click.",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "bernardohuaira",
   "license": "MIT",
   "icon": "media/logo.png",
@@ -68,7 +68,7 @@
         {
           "id": "projectman",
           "title": "ProjectMan",
-          "icon": "media/projectman-com.svg"
+          "icon": "media/icon-pm.svg"
         }
       ]
     },

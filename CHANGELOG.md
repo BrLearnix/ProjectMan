@@ -4,6 +4,17 @@ Todos los cambios notables de esta extensión se documentarán en este archivo.
 
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 
+## [0.0.5] - 2026-08-14
+
+### Añadido
+
+- Capturas de pantalla del proyecto en el README.
+- Nuevo icono de la extensión (estilo tablero de proyectos) en la barra de actividad y marketplace.
+
+### Cambiado
+
+- README mejorado con sección visual de capturas.
+
 ## [0.0.4] - 2026-08-14
 
 ### Añadido
