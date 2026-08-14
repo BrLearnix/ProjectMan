@@ -4,6 +4,22 @@ Todos los cambios notables de esta extensión se documentarán en este archivo.
 
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 
+## [0.0.4] - 2026-08-14
+
+### Añadido
+
+- Video de demostración integrado en el README.
+
+### Cambiado
+
+- README mejorado con sección de demo.
+
+## [0.0.3] - 2026-08-13
+
+### Cambiado
+
+- README con video de demostración.
+
 ## [0.0.2] - 2026-08-12
 
 ### Cambiado

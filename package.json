@@ -1,17 +1,40 @@
 {
   "name": "projectman",
-  "displayName": "ProjectMan",
-  "description": "A project manager for VS Code that automatically remembers your projects and lets you open them with one click.",
-  "version": "0.0.3",
+  "displayName": "Project Man",
+  "description": "Manage, organize, and quickly open all your projects directly from VS Code. ProjectMan remembers your projects and lets you access them with one click.",
+  "version": "0.0.4",
   "publisher": "bernardohuaira",
   "license": "MIT",
   "icon": "media/logo.png",
+  "homepage": "https://github.com/BrLearnix/ProjectMan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrLearnix/ProjectMan.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BrLearnix/ProjectMan/issues"
+  },
   "keywords": [
-    "project",
-    "projects",
-    "manager",
+    "project manager",
+    "project management",
+    "project organizer",
+    "project launcher",
+    "project manager vscode",
+    "workspace manager",
+    "workspace organizer",
+    "project switcher",
+    "project dashboard",
+    "project explorer",
+    "project organizer vscode",
     "workspace",
-    "folder"
+    "projects",
+    "project",
+    "manager",
+    "developer tools",
+    "productivity",
+    "developer productivity",
+    "vscode projects",
+    "folder manager"
   ],
   "galleryBanner": {
     "color": "#0E639C",
